@@ -5,28 +5,26 @@
     box-sizing: border-box;
 }
 
-/* 기본적인 폰트와 배경 설정 */
+/* 전체 화면 중앙 정렬 */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
-    text-align: center;
-    padding-top: 50px;  /* 페이지 상단에 여백 추가 */
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 가로축 중앙 정렬 */
+    align-items: center; /* 세로축 중앙 정렬 */
+    min-height: 100vh; /* 화면 전체 높이 사용 */
+    text-align: center; /* 모든 텍스트 중앙 정렬 */
 }
 
-/* 컨테이너 (페이지 중앙 정렬) */
+/* 컨테이너 (가로 제한) */
 .container {
     max-width: 700px;
-    margin: 0 auto;
     padding: 20px;
 }
 
-/* 헤더 스타일 (로고 및 제목) */
-header {
-    margin-top: 50px;
-}
-
+/* 헤더 스타일 */
 header .logo {
     width: 100px;
     height: 100px;
@@ -47,7 +45,7 @@ header p {
 
 header .join-btn {
     padding: 10px 20px;
-    background-color: #ffc0cb; /* 핑크 버튼 */
+    background-color: #ffc0cb;
     color: #fff;
     border: none;
     border-radius: 30px;
@@ -57,7 +55,7 @@ header .join-btn {
 }
 
 header .join-btn:hover {
-    background-color: #ff8da0; /* 버튼 호버 시 색상 */
+    background-color: #ff8da0;
 }
 
 /* 경고 메시지 섹션 */
@@ -71,15 +69,7 @@ header .join-btn:hover {
     color: #666;
 }
 
-.warning p {
-    margin-bottom: 10px;
-}
-
 /* 활동 섹션 */
-.activities {
-    margin-top: 50px;
-}
-
 .activities h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -93,7 +83,7 @@ header .join-btn:hover {
     margin-bottom: 20px;
 }
 
-/* 활동 이미지 및 가입 버튼 */
+/* 이미지 및 버튼 */
 .activity-image {
     position: relative;
     margin-top: 20px;
@@ -124,7 +114,7 @@ header .join-btn:hover {
     background-color: #ff8da0;
 }
 
-/* 반응형 웹 디자인 */
+/* 반응형 스타일 */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
