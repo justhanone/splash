@@ -1,65 +1,144 @@
-/* Reset 기본 스타일 */
-body, h1, h2, p {
+/* 기본적인 스타일 리셋 */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
+/* 기본적인 폰트와 배경 설정 */
 body {
-    line-height: 1.6;
-    background: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
     color: #333;
-    margin: 0;
-}
-
-header {
-    background: #4CAF50;
-    color: #fff;
-    padding: 20px 10px;
+    line-height: 1.6;
     text-align: center;
+    padding-top: 50px;  /* 페이지 상단에 여백 추가 */
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
+/* 컨테이너 (페이지 중앙 정렬) */
+.container {
+    max-width: 700px;
     margin: 0 auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-h1 {
+/* 헤더 스타일 (로고 및 제목) */
+header {
+    margin-top: 50px;
+}
+
+header .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+header h1 {
     font-size: 2.5rem;
-}
-
-h2 {
-    color: #4CAF50;
-    margin: 20px 0 10px;
-}
-
-p {
-    margin: 10px 0;
-}
-
-.gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background: #333;
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+header .join-btn {
+    padding: 10px 20px;
+    background-color: #ffc0cb; /* 핑크 버튼 */
     color: #fff;
-    font-size: 0.9rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header .join-btn:hover {
+    background-color: #ff8da0; /* 버튼 호버 시 색상 */
+}
+
+/* 경고 메시지 섹션 */
+.warning {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #666;
+}
+
+.warning p {
+    margin-bottom: 10px;
+}
+
+/* 활동 섹션 */
+.activities {
+    margin-top: 50px;
+}
+
+.activities h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.activities p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* 활동 이미지 및 가입 버튼 */
+.activity-image {
+    position: relative;
+    margin-top: 20px;
+}
+
+.activity-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activity-image .join-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffc0cb;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.activity-image .join-btn:hover {
+    background-color: #ff8da0;
+}
+
+/* 반응형 웹 디자인 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .activities h2 {
+        font-size: 1.5rem;
+    }
+
+    .activity-image img {
+        width: 100%;
+    }
 }
