@@ -1,64 +1,64 @@
-/* 기본적인 스타일 리셋 */
+/* Reset 스타일 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 전체 화면 중앙 정렬 */
+/* 전체 스타일 */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
-    display: flex; /* 플렉스 박스 사용 */
-    justify-content: center; /* 가로축 중앙 정렬 */
-    align-items: center; /* 세로축 중앙 정렬 */
-    min-height: 100vh; /* 화면 전체 높이 사용 */
-    text-align: center; /* 모든 텍스트 중앙 정렬 */
-}
-
-/* 컨테이너 (가로 제한) */
-.container {
-    max-width: 700px;
+    text-align: center;
     padding: 20px;
 }
 
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 /* 헤더 스타일 */
-header .logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+header {
+    margin-top: 50px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
     margin-bottom: 20px;
 }
 
-header h1 {
+h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2rem;
+p {
+    font-size: 1rem;
     margin-bottom: 20px;
 }
 
-header .join-btn {
+.join-btn {
+    display: inline-block;
     padding: 10px 20px;
     background-color: #ffc0cb;
     color: #fff;
     border: none;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-header .join-btn:hover {
+.join-btn:hover {
     background-color: #ff8da0;
 }
 
-/* 경고 메시지 섹션 */
+/* 경고 섹션 */
 .warning {
     background-color: #fff;
     padding: 20px;
@@ -67,43 +67,45 @@ header .join-btn:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     color: #666;
+    line-height: 1.4;
 }
 
-/* 활동 섹션 */
+/* 활동 소개 */
+.activities {
+    margin-top: 50px;
+}
+
 .activities h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .activities p {
     font-size: 1rem;
-    color: #777;
     margin-bottom: 20px;
+    color: #777;
 }
 
-/* 이미지 및 버튼 */
 .activity-image {
     position: relative;
-    margin-top: 20px;
 }
 
 .activity-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .activity-image .join-btn {
     position: absolute;
-    bottom: 2000px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffc0cb;
     padding: 12px 20px;
     border-radius: 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: white;
     border: none;
     cursor: pointer;
@@ -112,23 +114,4 @@ header .join-btn:hover {
 
 .activity-image .join-btn:hover {
     background-color: #ff8da0;
-}
-
-/* 반응형 스타일 */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .activities h2 {
-        font-size: 1.5rem;
-    }
-
-    .activity-image img {
-        width: 100%;
-    }
 }
