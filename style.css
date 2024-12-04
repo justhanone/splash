@@ -97,7 +97,7 @@ header .join-btn:hover {
 
 .activity-image .join-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 2000px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffc0cb;
