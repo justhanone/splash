@@ -71,10 +71,10 @@ p {
 }
 
 /* 활동 소개 */
-/*.activities {
+.activities {
     margin-top: 50px;
 }
-*/
+
 .activities h2 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -114,4 +114,26 @@ p {
 
 .activity-image .join-btn:hover {
     background-color: #ff8da0;
+}
+
+/* 고정된 버튼 */
+.fixed-join-btn {
+    position: fixed; /* 화면에 고정 */
+    bottom: 20px; /* 화면 아래에서 20px 위 */
+    left: 50%; /* 화면 가로의 50% 지점 */
+    transform: translateX(-50%); /* 중앙 정렬 */
+    padding: 10px 20px;
+    background-color: #ffc0cb; /* 분홍색 */
+    color: #fff; /* 흰색 텍스트 */
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 버튼 그림자 */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.fixed-join-btn:hover {
+    background-color: #ff8da0; /* hover 상태에서 더 짙은 분홍색 */
+    transform: translateX(-50%) scale(1.05); /* 확대 효과 유지 */
 }
